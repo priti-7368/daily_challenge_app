@@ -1,21 +1,2 @@
-Software Requirements:-
-
-Operating System : Windows 10 / 11
-Programming Language : Python 3
-Framework : Flask
-Frontend : HTML, CSS
-Database : SQLite
-Code Editor : Visual Studio Code
-Browser : Chrome / Edge
-
-Hardware Requirements:-
-Processor : Intel i3 or higher
-RAM : 4 GB minimum
-Storage : 500 MB free space
-
-Technologies Used:-
-Python : Backend logic
-Flask : Web framework
-SQLite : Database
-HTML : Page structure
-CSS : User interface styling
+Flask
+gunicorn
