@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Your Challenge History</h2>
+
+<div class="reflection-container">
+
+{% for h in history %}
+
+<div class="history-card {{ h.status }}">
+
+<p class="reflection-date">{{ h.date }}</p>
+
+<p class="reflection-text">{{ h.challenge_text }}</p>
+
+{% if h.status == "Completed" %}
+<p class="status">✔ Completed</p>
+{% else %}
+<p class="status">✖ Skipped</p>
+{% endif %}
+
+<a class="delete-btn"
+href="{{ url_for('delete_history', id=h.id) }}"
+onclick="return confirm('Delete this history record?')">
+Delete
+</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

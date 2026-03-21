@@ -1,0 +1,258 @@
+body{
+font-family:Arial;
+background:linear-gradient(to right, hwb(187 7% 12%), hwb(267 19% 30%));
+text-align:center;
+}
+
+nav{
+background:lab(6.32% -0.74 6.17 / 0.998);
+padding:15px;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+}
+
+.container{
+margin-top:40px;
+}
+
+input,textarea{
+width:250px;
+padding:10px;
+margin:10px;
+}
+
+button,a{
+padding:10px 15px;
+margin:5px;
+}
+
+.card{
+background:white;
+padding:20px;
+width:300px;
+margin:20px auto;
+border-radius:10px;
+box-shadow:0 0 5px rgba(0,0,0,0.2);
+}
+.reflection-container{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.reflection-card{
+background:white;
+width:350px;
+padding:20px;
+margin:15px;
+border-radius:10px;
+box-shadow:0px 2px 8px rgba(0,0,0,0.2);
+text-align:left;
+}
+
+.reflection-date{
+font-size:14px;
+color:gray;
+margin-bottom:10px;
+}
+
+.reflection-text{
+font-size:16px;
+}
+
+.flash-message{
+background:#d4edda;
+color:#155724;
+padding:10px;
+margin:20px auto;
+width:300px;
+border-radius:5px;
+}
+.progress-bar{
+width:300px;
+height:20px;
+background:hsl(349, 95%, 50%);
+border-radius:10px;
+margin-top:10px;
+overflow:hidden;
+}
+
+.completed{
+height:100%;
+background:#4CAF50;
+}
+
+.challenge-text{
+font-size:18px;
+margin:20px 0;
+}
+
+.challenge-buttons a{
+padding:10px 15px;
+margin:10px;
+text-decoration:none;
+border-radius:5px;
+}
+
+.complete-btn{
+background:#4CAF50;
+color:white;
+}
+
+.skip-btn{
+background:#e74c3c;
+color:white;
+}
+.delete-btn{
+display:inline-block;
+margin-top:10px;
+color:white;
+background:#e74c3c;
+padding:5px 10px;
+border-radius:5px;
+text-decoration:none;
+font-size:14px;
+}
+
+.status{
+margin-top:10px;
+font-weight:bold;
+}
+
+.completed-status{
+color:#2ecc71;
+}
+
+.skipped-status{
+color:#e74c3c;
+}
+
+.history-card{
+background:white;
+width:350px;
+margin:20px auto;
+padding:20px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* Completed challenge */
+.history-card.Completed{
+border-left:6px solid #2ecc71;
+}
+
+/* Skipped challenge */
+.history-card.Skipped{
+border-left:6px solid #e74c3c;
+}
+
+.status{
+margin-top:10px;
+font-weight:bold;
+}
+
+/* Base challenge card */
+
+.challenge-card{
+background:white;
+
+width:380px;
+margin:40px auto;
+padding:30px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+text-align:center;
+transition: 0.4s;
+}
+
+/* Category colors */
+
+
+
+/* buttons */
+
+.complete-btn{
+background:#27ae60;
+color:white;
+padding:10px 15px;
+border-radius:5px;
+text-decoration:none;
+margin-right:10px;
+}
+
+.skip-btn{
+background:#e74c3c;
+color:white;
+padding:10px 15px;
+border-radius:5px;
+text-decoration:none;
+}
+
+.challenge-card:hover{
+transform:translateY(-6px);
+transition:0.3s;
+}
+
+.stats-box{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:20px;
+}
+
+.stat{
+background:white;
+padding:20px;
+border-radius:10px;
+width:120px;
+text-align:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.stat h2{
+margin:0;
+font-size:28px;
+}
+
+.completed{
+border-top:6px solid #27ae60;
+}
+
+.skipped{
+border-top:6px solid #e74c3c;
+}
+
+header img {
+    height: 250px !important;
+    width: 250px !important;
+    margin-right: 10px;
+    vertical-align: middle;
+     border-radius: 50%;  /* makes it circular */
+    object-fit: cover;   /* ensures image fills the circle without stretching */
+    border: 2px solid #000;
+}
+
+.dashboard-images {
+    display: flex;             /* Create two columns */
+    justify-content: space-between; /* space between left and right columns */
+    gap: 20px;                 /* space between columns */
+    margin: 20px;
+}
+
+.image-column {
+    display: flex;
+    flex-direction: column;    /* stack images vertically */
+    gap: 20px;                 /* space between top and bottom image */
+}
+
+.image-column img {
+   width: 250px;   /* smaller than before */
+    height: 250px;  /* maintain square shape */
+    object-fit: cover;
+    border-radius: 20px;      /* optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* optional shadow */
+}

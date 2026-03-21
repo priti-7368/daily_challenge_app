@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Daily Challenge</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="/">Home</a>
+<a href="/categories">Dashboard</a>
+<a href="/history">History</a>
+<a href="/statistics">Statistics</a>
+<a href="/reflection">Reflection</a>
+<a href="/logout">Logout</a>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="flash-message">
+      {% for msg in messages %}
+        <p>{{ msg }}</p>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+</nav>
+
+<div class="container">
+
+{% block content %}
+
+{% endblock %}
+
+</div>
+<script>
+
+setTimeout(function(){
+
+let flash=document.querySelector(".flash-message");
+
+if(flash){
+flash.style.display="none";
+}
+
+},3000);
+
+</script>
+
+</body>
+</html>

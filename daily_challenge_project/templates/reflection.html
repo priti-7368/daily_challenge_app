@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Daily Reflection Journal</h2>
+
+<form method="POST">
+
+<textarea name="note" placeholder="Write your reflection..." required></textarea>
+
+<br>
+
+<button type="submit">Save Reflection</button>
+
+</form>
+
+<hr>
+
+<h3>Your Reflection Journal</h3>
+
+<div class="reflection-container">
+
+{% for r in reflections %}
+
+<div class="reflection-card">
+
+<p class="reflection-date">{{ r.date }}</p>
+
+<p class="reflection-text">{{ r.note }}</p>
+<a class="delete-btn" href="{{ url_for('delete_reflection', id=r.id) }}">Delete</a>
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

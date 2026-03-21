@@ -1,0 +1,36 @@
+
+<!--Its working dont get wrong check at the bottom for clarification-->
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Your Progress Statistics</h2>
+
+<div class="card">
+
+<p>Total Challenges Attempted: {{total}}</p>
+
+<p>Completed: {{completed}}</p>
+
+<p>Skipped: {{skipped}}</p>
+<div class="progress-bar">
+    <div class="completed" style="width: {{ percentage }}%;"></div>
+
+</div>
+
+</div>
+
+{% endblock %}
+
+
+
+<!--  This happens because:
+
+VS Code HTML validator only understands pure HTML
+Your template contains Jinja syntax 
+
+The HTML extension does not understand these, so it marks them as 
+errors even though Flask + Jinja process them correctly.
+
+-->

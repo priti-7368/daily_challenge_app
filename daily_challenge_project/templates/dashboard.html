@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>🎯 Today's Challenge</h2>
+
+<div class="challenge-card category-{{ category_id }}">
+
+<p class="challenge-text">{{ challenge.challenge_text }}</p>
+
+<div class="challenge-buttons">
+
+<a class="complete-btn" href="/complete/{{ challenge.id }}">✔ Complete</a>
+
+<a class="skip-btn" href="/skip/{{ challenge.id }}">✖ Skip</a>
+
+</div>
+
+</div>
+
+
+<hr>
+
+<h3>Your Progress</h3>
+
+<div class="stats-box">
+
+<div class="stat completed">
+<p>✔ Completed</p>
+<h3>{{ completed }}</h3>
+</div>
+
+<div class="stat skipped">
+<p>✖ Skipped</p>
+<h2>{{ skipped }}</h2>
+</div>
+
+</div>
+
+{% endblock %}

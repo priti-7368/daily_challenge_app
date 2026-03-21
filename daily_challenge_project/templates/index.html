@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Daily Challenge Application</h1>
+<h2>Fun & Engaging<h2>
+<h4>Improve your habits with simple daily challenges.</h4>
+<!-- In your header or navbar -->
+<header>
+    <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Daily Challenge Logo" style="height:50px;">
+    <h4>Sign up or log in<h4>
+</header>
+<a href="/login">Login</a>
+<a href="/register">Register</a>
+
+{% endblock %}

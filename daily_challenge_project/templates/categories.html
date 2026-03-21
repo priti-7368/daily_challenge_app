@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="dashboard-title">Select Challenge Category</h2>
+
+<div class="dashboard-images">
+
+    <!-- Left Column -->
+    <div class="image-column">
+        <img src="{{ url_for('static', filename='images/img1.jpeg') }}" alt="Image 1" class="dashboard-img">
+        <img src="{{ url_for('static', filename='images/img2.jpeg') }}" alt="Image 2" class="dashboard-img">
+    </div>
+
+    <!-- Middle Column: Challenge Cards -->
+    <div class="challenge-cards">
+        {% for c in categories %}
+        <div class="card">
+            <h3>{{c.name}}</h3>
+            <a href="/dashboard/{{c.id}}" class="start-btn">Start Challenge</a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Right Column -->
+    <div class="image-column">
+        <img src="{{ url_for('static', filename='images/img3.jpeg') }}" alt="Image 3" class="dashboard-img">
+        <img src="{{ url_for('static', filename='images/img4.jpeg') }}" alt="Image 4" class="dashboard-img">
+    </div>
+
+</div>
+
+{% endblock %}
