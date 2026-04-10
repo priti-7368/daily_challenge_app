@@ -3,7 +3,7 @@ import sqlite3
 import random
 from datetime import date
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="daily_challenge_project/templates")
 app.secret_key = "secretkey"
 
 
