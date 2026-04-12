@@ -17,6 +17,22 @@ def get_db():
     conn.row_factory = sqlite3.Row
     return conn
 
+# changed here on -12 april----
+
+def create_tables():
+    conn = get_db()
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            username TEXT,
+            email TEXT,
+            password TEXT
+        )
+    """)
+    conn.commit()
+    conn.close()
+
+create_tables()
 
 # ✅ HOME ROUTE (IMPORTANT FIX)
 @app.route("/")
