@@ -4,7 +4,7 @@ import random
 from datetime import date
 import os
 
-app = Flask(__name__,template_folder="daily_challenge_project/templates",static_folder="daily_challenge_project/static")
+app = Flask(__name__)
 app.secret_key = "secretkey"
 
 
